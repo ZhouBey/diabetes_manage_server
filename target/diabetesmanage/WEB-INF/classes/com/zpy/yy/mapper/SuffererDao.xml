@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.SuffererDao" >
+    <insert id="save" parameterType="Sufferer" useGeneratedKeys="true" keyProperty="id">
+        insert into sufferer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="name != null">
+                name,
+            </if>
+
+            <if test="phone != null">
+                phone,
+            </if>
+
+            <if test="sex != null">
+                sex,
+            </if>
+
+            <if test="birthday != null">
+                birthday,
+            </if>
+
+            <if test="address != null">
+                address,
+            </if>
+
+            <if test="sufferedDate != null">
+                suffered_date,
+            </if>
+
+            <if test="photo != null">
+                photo,
+            </if>
+
+            <if test="password != null">
+                password,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="name != null">
+                #{ name },
+            </if>
+
+            <if test="phone != null">
+                #{ phone },
+            </if>
+
+            <if test="sex != null">
+                #{ sex },
+            </if>
+
+            <if test="birthday != null">
+                #{ birthday },
+            </if>
+
+            <if test="address != null">
+                #{ address },
+            </if>
+
+            <if test="sufferedDate != null">
+                #{ sufferedDate },
+            </if>
+
+            <if test="photo != null">
+                #{ photo },
+            </if>
+
+            <if test="password != null">
+                #{ password },
+            </if>
+
+            now()
+
+        </trim>
+    </insert>
+    <update id="update" parameterType="Sufferer">
+        update sufferer
+        <set>
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="name != null">
+                name=#{ name },
+            </if>
+
+            <if test="phone != null">
+                phone=#{ phone },
+            </if>
+
+            <if test="sex != null">
+                sex=#{ sex },
+            </if>
+
+            <if test="birthday != null">
+                birthday=#{ birthday },
+            </if>
+
+            <if test="address != null">
+                address=#{ address },
+            </if>
+
+            <if test="sufferedDate != null">
+                suffered_date=#{ sufferedDate },
+            </if>
+
+            <if test="photo != null">
+                photo=#{ photo },
+            </if>
+
+            <if test="password != null">
+                password=#{ password },
+            </if>
+
+            update_d=now()
+
+        </set>
+        where id = #{ id}
+    </update>
+    <select id="findById"  resultType="Sufferer">
+        select
+
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        suffered_date
+        ,
+
+        photo
+        ,
+
+        password
+
+        from sufferer where id = #{id} and delete_d is null
+    </select>
+    <update id="deleteById" >
+        update  sufferer set delete_d =now() where id = #{id}
+    </update>
+    <select id="findSuffererByPhone"  resultType="Sufferer">
+        select
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        suffered_date
+        ,
+
+        photo
+        ,
+
+        password
+
+        from sufferer where phone = #{phone} and delete_d is null
+    </select>
+    <select id="getAllSuffererListPage"  resultType="Sufferer">
+        select
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        suffered_date
+        ,
+
+        photo
+        ,
+
+        password
+
+        from sufferer where delete_d IS NULL
+
+        order by create_d desc
+    </select>
+
+</mapper>

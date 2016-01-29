@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.HealthInfoDao" >
+    <insert id="save" parameterType="HealthInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into health_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="title != null">
+                title,
+            </if>
+
+            <if test="infoImage != null">
+                info_image,
+            </if>
+
+            <if test="msg != null">
+                msg,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="title != null">
+                #{ title },
+            </if>
+
+            <if test="infoImage != null">
+                #{ infoImage },
+            </if>
+
+            <if test="msg != null">
+                #{ msg },
+            </if>
+
+            now()
+        </trim>
+    </insert>
+    <update id="deleteById">
+        update  health_info set delete_d =now() where id = #{id}
+    </update>
+    <update id="update" parameterType="HealthInfo">
+        update health_info
+        <set>
+
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="title != null">
+                title=#{ title },
+            </if>
+
+            <if test="infoImage != null">
+                info_image=#{ infoImage },
+            </if>
+
+            <if test="msg != null">
+                msg=#{ msg },
+            </if>
+
+            update_d=now()
+
+
+        </set>
+        where id = #{ id }
+    </update>
+    <select id="findById"  resultType="HealthInfo">
+        select
+
+        id
+        ,
+
+        title
+        ,
+
+        info_image
+        ,
+
+        msg
+        ,
+
+        create_d
+        ,
+
+        update_d
+        ,
+
+        delete_d
+
+
+        from health_info where id = #{id} and delete_d is null
+    </select>
+    <select id="getAllHealthInfoListPage"  resultType="HealthInfo">
+        select
+
+        id
+        ,
+
+        title
+        ,
+
+        info_image
+        ,
+
+        msg
+        ,
+
+        create_d
+        ,
+
+        update_d
+        ,
+
+        delete_d
+
+        from health_info where delete_d IS NULL
+
+        order by create_d desc
+
+    </select>
+</mapper>

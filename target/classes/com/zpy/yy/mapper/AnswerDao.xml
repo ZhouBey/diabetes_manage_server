@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.AnswerDao" >
+    <insert id="save" parameterType="Answer" useGeneratedKeys="true" keyProperty="id">
+        insert into answers
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="content != null">
+                content,
+            </if>
+
+            <if test="doctorId != null">
+                doctor_id,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="content != null">
+                #{ content },
+            </if>
+
+            <if test="doctorId != null">
+                #{ doctorId },
+            </if>
+
+            now()
+        </trim>
+    </insert>
+    <update id="update" parameterType="Answer">
+        update answers
+        <set>
+
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="content != null">
+                content=#{ content },
+            </if>
+
+            <if test="doctorId != null">
+                doctor_id=#{ doctorId },
+            </if>
+
+            update_d=now()
+
+        </set>
+        where id = #{ id}
+    </update>
+    <select id="findById"  resultType="Answer">
+        select
+
+        id
+        ,
+        content
+        ,
+
+        doctor_id
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from answers where id = #{id} and delete_d is null
+    </select>
+    <select id="findAnswerByDoctorId"  resultType="Answer">
+        select
+
+        id
+        ,
+        content
+        ,
+
+        doctor_id
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from answers where doctor_id = #{doctorId} and delete_d is null
+    </select>
+    <update id="deleteById" >
+        update  answers set delete_d =now() where id = #{id}
+    </update>
+
+</mapper>

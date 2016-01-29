@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="DiabetesManage:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="diabetesmanage.war">
+      <element id="artifact" artifact-name="DiabetesManage:war exploded" />
+    </root>
+  </artifact>
+</component>

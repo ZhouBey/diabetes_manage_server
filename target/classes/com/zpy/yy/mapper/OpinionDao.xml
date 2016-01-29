@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.OpinionDao" >
+    <insert id="save" parameterType="Opinion" useGeneratedKeys="true" keyProperty="id">
+        insert into opinion
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="phone != null">
+                phone,
+            </if>
+
+            <if test="content != null">
+                content,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="phone != null">
+                #{ phone },
+            </if>
+
+            <if test="content != null">
+                #{ content },
+            </if>
+
+            now()
+        </trim>
+    </insert>
+    <update id="update" parameterType="Opinion">
+        update opinion
+        <set>
+
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="phone != null">
+                phone=#{ phone },
+            </if>
+
+            <if test="content != null">
+                content=#{ content },
+            </if>
+
+            update_d=now()
+
+        </set>
+        where id = #{ id}
+    </update>
+    <select id="findById"  resultType="Opinion">
+        select
+
+        id
+        ,
+        phone
+        ,
+
+        content
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from opinion where id = #{id} and delete_d is null
+    </select>
+    <update id="deleteById" >
+        update opinion set delete_d =now() where id = #{id}
+    </update>
+</mapper>

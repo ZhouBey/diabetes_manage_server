@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+    <context:property-placeholder location="classpath:config.properties" />
+    <util:properties id="properties" location="classpath:config.properties"/>
+
+    <!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
+    <context:component-scan base-package="com.zpy.yy.controller" />
+    <mvc:annotation-driven/>
+
+
+    <!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter" >
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="${baseView}"/>
+        <property name="defaultEncoding" value="utf-8"/>
+        <!--<property name="freemarkerSettings">-->
+            <!--<props>-->
+                <!--<prop key="template_update_delay">10</prop>-->
+                <!--<prop key="locale">zh_CN</prop>-->
+                <!--<prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>-->
+                <!--<prop key="date_format">yyyy-MM-dd</prop>-->
+                <!--<prop key="number_format">#.##</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+        <!--<property name="freemarkerVariables">-->
+            <!--<map>-->
+                <!--<entry key="APP" value=""></entry>-->
+                <!--<entry key="clearPercentStr" value-ref="fmFilterStr"  />-->
+                <!--<entry key="res" value-ref="simpleAutoAddTime"  />-->
+            <!--</map>-->
+        <!--</property>-->
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
+        <property name="suffix" value="${viewEnd}"/>
+        <property name="contentType" value="text/html;charset=utf-8"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSessionAttributes" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding">
+            <value>UTF-8</value>
+        </property>
+        <property name="maxUploadSize">
+            <value>32505856</value><!-- 上传文件大小限制为31M，31*1024*1024 -->
+        </property>
+        <property name="maxInMemorySize">
+            <value>4096</value>
+        </property>
+
+    </bean>
+
+    <mvc:default-servlet-handler />
+    <!--<mvc:interceptors>-->
+        <!--<bean class="net.tcjr.web.interceptor.UserLoginInterceptor"></bean>-->
+        <!--<bean class="net.tcjr.web.interceptor.CommonInterceptor"></bean>-->
+    <!--</mvc:interceptors>-->
+    <!--<bean id="viewNameTranslator" class="net.tcjr.web.util.ConventionViewNameTranslator"></bean>-->
+</beans>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.AppTokenDao">
+    <insert id="save" parameterType="AppToken" useGeneratedKeys="true" keyProperty="id">
+        insert into app_token
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="userId != null">
+                user_id,
+            </if>
+
+            <if test="token != null">
+                token,
+            </if>
+
+            <if test="duration != null">
+                duration,
+            </if>
+
+            <if test="roleType != null">
+                role_type,
+            </if>
+
+            <if test="updateD != null">
+                update_d,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="userId != null">
+                #{ userId },
+            </if>
+
+            <if test="token != null">
+                #{ token },
+            </if>
+
+            <if test="duration != null">
+                #{ duration },
+            </if>
+
+            <if test="roleType != null">
+                #{ roleType },
+            </if>
+
+            <if test="updateD != null">
+                #{ updateD },
+            </if>
+            now()
+        </trim>
+    </insert>
+    <update id="update" parameterType="AppToken">
+        update app_token
+        <set>
+
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="userId != null">
+                user_id=#{ userId },
+            </if>
+
+            <if test="token != null">
+                token=#{ token },
+            </if>
+
+            <if test="duration != null">
+                duration=#{ duration },
+            </if>
+
+            <if test="roleType != null">
+                role_type=#{ roleType },
+            </if>
+
+            update_d=now()
+
+        </set>
+        where user_id = #{ userId}
+    </update>
+    <select id="findById" resultType="AppToken">
+        select
+
+        id
+        ,
+        token
+        ,
+
+        user_id
+        ,
+
+        duration
+        ,
+
+        role_type
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from app_token where id = #{id} and delete_d is null
+    </select>
+    <select id="findAppTokenByUserId" resultType="AppToken">
+        select
+
+        id
+        ,
+        token
+        ,
+
+        user_id
+        ,
+
+        duration
+        ,
+
+        role_type
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+
+        from app_token where user_id = #{userId}
+        and role_type = #{roleType}
+        and delete_d is null
+    </select>
+    <select id="findAppTokenByToken" resultType="AppToken">
+        select
+        id
+        ,
+        token
+        ,
+
+        user_id
+        ,
+
+        role_type
+        ,
+
+        duration
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+
+        from app_token where token = #{ token } and delete_d is null
+    </select>
+    <update id="deleteById">
+        update  app_token set delete_d =now() where id = #{id}
+    </update>
+
+</mapper>

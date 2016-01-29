@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.DoctorDao" >
+    <insert id="save" parameterType="Doctor" useGeneratedKeys="true" keyProperty="id">
+        insert into doctor
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="name != null">
+                name,
+            </if>
+
+            <if test="phone != null">
+                phone,
+            </if>
+
+            <if test="password != null">
+                password,
+            </if>
+
+            <if test="sex != null">
+                sex,
+            </if>
+
+            <if test="birthday != null">
+                birthday,
+            </if>
+
+            <if test="address != null">
+                address,
+            </if>
+
+            <if test="hospital != null">
+                hospital,
+            </if>
+
+            <if test="photo != null">
+                photo,
+            </if>
+
+            <if test="certificateImage != null">
+                certificate_image,
+            </if>
+
+            <if test="isActivate != null">
+                is_activate,
+            </if>
+
+            <if test="post != null">
+                post,
+            </if>
+
+            <if test="info != null">
+                info,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="name != null">
+                #{ name },
+            </if>
+
+            <if test="phone != null">
+                #{ phone },
+            </if>
+
+            <if test="password != null">
+                #{ password },
+            </if>
+
+            <if test="sex != null">
+                #{ sex },
+            </if>
+
+            <if test="birthday != null">
+                #{ birthday },
+            </if>
+
+            <if test="address != null">
+                #{ address },
+            </if>
+
+            <if test="hospital != null">
+                #{ hospital },
+            </if>
+
+            <if test="photo != null">
+                #{ photo },
+            </if>
+
+            <if test="certificateImage != null">
+                #{ certificateImage },
+            </if>
+
+            <if test="isActivate != null">
+                #{ isActivate },
+            </if>
+
+            <if test="post != null">
+                #{ post },
+            </if>
+
+            <if test="info != null">
+                #{ info },
+            </if>
+
+            now()
+
+        </trim>
+    </insert>
+    <update id="update" parameterType="Doctor">
+        update doctor
+        <set>
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="name != null">
+                name=#{ name },
+            </if>
+
+            <if test="phone != null">
+                phone=#{ phone },
+            </if>
+
+            <if test="password != null">
+                password=#{ password },
+            </if>
+
+            <if test="sex != null">
+                sex=#{ sex },
+            </if>
+
+            <if test="birthday != null">
+                birthday=#{ birthday },
+            </if>
+
+            <if test="address != null">
+                address=#{ address },
+            </if>
+
+            <if test="hospital != null">
+                hospital=#{ hospital },
+            </if>
+
+            <if test="photo != null">
+                photo=#{ photo },
+            </if>
+
+            <if test="certificateImage != null">
+                certificate_image=#{ certificateImage },
+            </if>
+
+            <if test="isActivate != null">
+                is_activate=#{ isActivate },
+            </if>
+
+            <if test="post != null">
+                post=#{ post },
+            </if>
+
+            <if test="info != null">
+                info=#{ info },
+            </if>
+
+            update_d=now()
+
+        </set>
+        where id = #{ id}
+    </update>
+    <select id="findById"  resultType="Doctor">
+        select
+
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        password
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        hospital
+        ,
+
+        photo
+        ,
+
+        certificate_image
+        ,
+
+        is_activate
+        ,
+
+        post
+        ,
+
+        info
+
+        from doctor where id = #{id} and delete_d is null
+    </select>
+    <update id="deleteById" >
+        update  doctor set delete_d =now() where id = #{id}
+    </update>
+    <select id="findDoctorByPhone"  resultType="Doctor">
+        select
+
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        password
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        hospital
+        ,
+
+        photo
+        ,
+
+        certificate_image
+        ,
+
+        is_activate
+        ,
+        post
+        ,
+        info
+
+        from doctor where phone = #{phone} and delete_d is null
+    </select>
+    <select id="getAllDoctorListPage"  resultType="Doctor">
+        select
+
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        password
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        hospital
+        ,
+
+        photo
+        ,
+
+        certificate_image
+        ,
+
+        is_activate
+        ,
+        post
+        ,
+        info
+
+        from doctor where delete_d IS  NULL
+
+        order by create_d desc
+    </select>
+</mapper>

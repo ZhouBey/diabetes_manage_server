@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpy.yy.dao.QuestionAndAnswerDao">
+    <insert id="save" parameterType="QuestionAndAnswer" useGeneratedKeys="true" keyProperty="id">
+        insert into question_and_answer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                id,
+            </if>
+
+            <if test="questionId != null">
+                question_id,
+            </if>
+
+            <if test="answerId != null">
+                answer_id,
+            </if>
+
+            create_d
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="id != null">
+                #{ id },
+            </if>
+
+            <if test="questionId != null">
+                #{ questionId },
+            </if>
+
+            <if test="answerId != null">
+                #{ answerId },
+            </if>
+
+            now()
+        </trim>
+    </insert>
+    <update id="update" parameterType="QuestionAndAnswer">
+        update question_and_answer
+        <set>
+
+            <if test="id != null">
+                id=#{ id },
+            </if>
+
+            <if test="questionId != null">
+                question_id=#{ questionId },
+            </if>
+
+            <if test="answerId != null">
+                answer_id=#{ answerId },
+            </if>
+
+            update_d=now()
+
+        </set>
+        where question_id = #{ questionId }
+    </update>
+    <select id="findById" resultType="QuestionAndAnswer">
+        select
+
+        id
+        ,
+        question_id
+        ,
+
+        answer_id
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from question_and_answer where id = #{id} and delete_d is null
+    </select>
+    <select id="getAnswersByQuestionId" resultType="QuestionAndAnswer">
+        select
+        id
+        ,
+        question_id
+        ,
+        answer_id
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from question_and_answer where question_id = #{questionId}
+        and answer_id is not null
+        and delete_d is null
+    </select>
+    <update id="deleteById">
+        update  question_and_answer set delete_d =now() where id = #{id}
+    </update>
+
+</mapper>
