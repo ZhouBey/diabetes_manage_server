@@ -16,13 +16,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/util/AjaxCode.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/util/AjaxCode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/util/TextUtil.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/util/TextUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/zpy/yy/AppTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/zpy/yy/AppTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DiabetesManage.iml" afterPath="$PROJECT_DIR$/DiabetesManage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/diabetesmanage/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="DiabetesManage.iws" />
@@ -938,12 +932,19 @@
       <workItem from="1451283434445" duration="747000" />
       <workItem from="1451351632965" duration="2083000" />
       <workItem from="1455183047181" duration="2488000" />
-      <workItem from="1455978675415" duration="1242000" />
+      <workItem from="1455978675415" duration="1309000" />
     </task>
+    <task id="LOCAL-00001" summary="医生可以对一个问题回复多次">
+      <created>1455980001902</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1455980001902</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197233000" />
+    <option name="totallyTimeSpent" value="197300000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1000,6 +1001,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="医生可以对一个问题回复多次" />
+    <option name="LAST_COMMIT_MESSAGE" value="医生可以对一个问题回复多次" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
