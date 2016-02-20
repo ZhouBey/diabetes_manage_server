@@ -47,7 +47,7 @@ public class DoctorApiController extends BaseController {
      */
     @RequestMapping("/doctorRegister")
     @ResponseBody
-    public AjaxModel doctorRegister(String name,String phone, String password, String hospital,
+    public AjaxModel doctorRegister(String name, String phone, String password, String hospital,
                                     String certificate_image, String info, String post, String sex, String birthday) {
         AjaxModel model = new AjaxModel();
         if (iDoctorService.phoneExist(phone)) {
@@ -143,10 +143,9 @@ public class DoctorApiController extends BaseController {
         answer.setContent(content);
         answer.setDoctorId(doctor.getId());
         if (iAnswerService.addAnswer(answer)) {
-            Answer answerExist = iAnswerService.findAnswerByDoctorId(doctor.getId());
             QuestionAndAnswer qa = new QuestionAndAnswer();
             qa.setQuestionId(questionId);
-            qa.setAnswerId(answerExist.getId());
+            qa.setAnswerId(answer.getId());
             iQuestionAndAnswerService.updateQA(qa);
             model.setCode(AjaxCode.OK);
             return model;
