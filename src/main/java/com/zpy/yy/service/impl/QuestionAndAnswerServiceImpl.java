@@ -1,8 +1,11 @@
 package com.zpy.yy.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.zpy.yy.bean.QuestionAndAnswer;
 import com.zpy.yy.dao.QuestionAndAnswerDao;
 import com.zpy.yy.service.IQuestionAndAnswerService;
+import com.zpy.yy.util.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +23,7 @@ public class QuestionAndAnswerServiceImpl implements IQuestionAndAnswerService {
     @Override
     public boolean addQA(QuestionAndAnswer questionAndAnswer) {
         questionAndAnswerDao.save(questionAndAnswer);
-        return questionAndAnswer.getId()!=null;
+        return questionAndAnswer.getId() != null;
     }
 
     @Override
@@ -40,7 +43,17 @@ public class QuestionAndAnswerServiceImpl implements IQuestionAndAnswerService {
     }
 
     @Override
-    public List<QuestionAndAnswer> getAnswersByQuestionId(Integer questionId) {
+    public List<QuestionAndAnswer> getAnswersByQuestionId(Integer questionId, PageInfo pageInfo) {
+        PageHelper.startPage(pageInfo.getCurrentPage(), pageInfo.getShowCount());
+        List<QuestionAndAnswer> list = questionAndAnswerDao.getAnswersByQuestionId(questionId);
+        pageInfo.setTotalResult((int) ((Page) list).getTotal());
+        pageInfo.setCurrentPage(((Page) list).getPageNum());
+        pageInfo.setShowCount(((Page) list).getPageSize());
+        return list;
+    }
+
+    @Override
+    public List<QuestionAndAnswer> getAllAnswers(Integer questionId) {
         return questionAndAnswerDao.getAnswersByQuestionId(questionId);
     }
 }

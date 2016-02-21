@@ -58,7 +58,7 @@ public class QuestionApiController extends BaseController {
             Question question = questionListPage.get(i);
             int suffererId = question.getSuffererId();
             Sufferer sufferer = iSuffererService.findSufferById(suffererId);
-            List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAnswersByQuestionId(question.getId());
+            List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAllAnswers(question.getId());
             Map map = new HashMap();
             map.put("question", question);
             map.put("sufferer", sufferer);
@@ -133,7 +133,7 @@ public class QuestionApiController extends BaseController {
         List<Map<String, Object>> list = new ArrayList<>();
         for (int i = 0; i < myQuestionList.size(); i++) {
             Question question = myQuestionList.get(i);
-            List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAnswersByQuestionId(question.getId());
+            List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAnswersByQuestionId(question.getId(), pageInfo);
             Map map = new HashMap();
             map.put("question", question);
             map.put("reply_count", questionAndAnswers.size());
@@ -149,23 +149,28 @@ public class QuestionApiController extends BaseController {
 
     @RequestMapping("/getAnswersForOneQuestion")
     @ResponseBody
-    public AjaxModel getAnswersForOneQuestion(Integer questionId) {
+    public AjaxModel getAnswersForOneQuestion(Integer questionId, PageInfo pageInfo) {
         AjaxModel model = new AjaxModel();
         if (questionId == null) {
             model.setCode(AjaxCode.ERROR);
             return model;
         }
-        List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAnswersByQuestionId(questionId);
-        List<Map<String,Object>> list = new ArrayList<>();
+        List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAnswersByQuestionId(questionId, pageInfo);
+        List<QuestionAndAnswer> allAnswers = iQuestionAndAnswerService.getAllAnswers(questionId);
+        List<Map<String, Object>> list = new ArrayList<>();
         for (int i = 0; i < questionAndAnswers.size(); i++) {
             Answer answer = iAnswerService.findAnswerById(questionAndAnswers.get(i).getAnswerId());
             Doctor doctor = iDoctorService.findDoctorById(answer.getDoctorId());
-            Map map = new HashMap();
-            map.put("answer",answer);
-            map.put("doctor",doctor);
-            list.add(map);
+            Map item = new HashMap();
+            item.put("answer", answer);
+            item.put("doctor", doctor);
+            list.add(item);
         }
-        model.setData(list);
+        Map map = new HashMap();
+        map.put("list", list);
+        map.put("pageInfo", pageInfo);
+        map.put("reply_count", allAnswers.size());
+        model.setData(map);
         model.setCode(AjaxCode.OK);
         return model;
     }
