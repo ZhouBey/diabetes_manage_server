@@ -92,6 +92,26 @@
         and answer_id is not null
         and delete_d is null
     </select>
+
+
+    <select id="getAnswersByAnswerId" resultType="QuestionAndAnswer">
+        select
+        id
+        ,
+        question_id
+        ,
+        answer_id
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from question_and_answer where answer_id = #{answerId}
+        and question_id is not null
+        and delete_d is null
+    </select>
+
     <update id="deleteById">
         update  question_and_answer set delete_d =now() where id = #{id}
     </update>

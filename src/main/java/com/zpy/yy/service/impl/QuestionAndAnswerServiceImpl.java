@@ -56,4 +56,9 @@ public class QuestionAndAnswerServiceImpl implements IQuestionAndAnswerService {
     public List<QuestionAndAnswer> getAllAnswers(Integer questionId) {
         return questionAndAnswerDao.getAnswersByQuestionId(questionId);
     }
+
+    @Override
+    public QuestionAndAnswer getAnswersByAnswerId(Integer answerId) {
+        return questionAndAnswerDao.getAnswersByAnswerId(answerId);
+    }
 }

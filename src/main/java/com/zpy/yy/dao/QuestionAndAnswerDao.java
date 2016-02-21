@@ -14,4 +14,5 @@ import java.util.List;
 @Repository
 public interface QuestionAndAnswerDao extends BaseMapper<QuestionAndAnswer> {
     List<QuestionAndAnswer> getAnswersByQuestionId(Integer questionId);
+    QuestionAndAnswer getAnswersByAnswerId(Integer answerId);
 }

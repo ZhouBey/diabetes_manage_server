@@ -3,10 +3,7 @@ package com.zpy.yy.controller;
 import com.zpy.yy.base.BaseConfig;
 import com.zpy.yy.base.BaseController;
 import com.zpy.yy.bean.*;
-import com.zpy.yy.service.IAnswerService;
-import com.zpy.yy.service.IAppTokenService;
-import com.zpy.yy.service.IDoctorService;
-import com.zpy.yy.service.IQuestionAndAnswerService;
+import com.zpy.yy.service.*;
 import com.zpy.yy.util.AjaxCode;
 import com.zpy.yy.util.AjaxModel;
 import com.zpy.yy.util.PageInfo;
@@ -16,9 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping("/doctorApi")
@@ -32,6 +27,9 @@ public class DoctorApiController extends BaseController {
 
     @Autowired
     IAnswerService iAnswerService;
+
+    @Autowired
+    IQuestionService iQuestionService;
 
     @Autowired
     IQuestionAndAnswerService iQuestionAndAnswerService;
@@ -166,6 +164,45 @@ public class DoctorApiController extends BaseController {
         map.put("pageInfo", pageInfo);
         model.setData(map);
         model.setCode(AjaxCode.OK);
+        return model;
+    }
+
+    @RequestMapping("/getOneDoctorReply")
+    @ResponseBody
+    public AjaxModel getOneDoctorReply(String token, PageInfo pageInfo) {
+        AjaxModel model = new AjaxModel();
+        if (TextUtil.isEmpty(token)) {
+            model.setCode(AjaxCode.TOKEN_IS_NULL);
+            return model;
+        }
+        AppToken appToken = iAppTokenService.findAppTokenByToken(token);
+        if (appToken == null) {
+            model.setCode(AjaxCode.ACCOUNT_ALREADY_NOT_EXIST);
+            return model;
+        }
+        List<Answer> answerList = iAnswerService.findAnswerByDoctorId(appToken.getUserId(), pageInfo);
+        List<Integer> questionIdList = new ArrayList<>();
+        //去掉重复的问题
+        for (int i = 0; i < answerList.size(); i++) {
+            questionIdList.add(iQuestionAndAnswerService.getAnswersByAnswerId(answerList.get(i).getId()).getQuestionId());
+        }
+        HashSet h = new HashSet(questionIdList);
+        questionIdList.clear();
+        questionIdList.addAll(h);
+        List<Map<String, Object>> list = new ArrayList<>();
+        for (int i = 0; i < questionIdList.size(); i++) {
+            Question question = iQuestionService.findQuestionById(questionIdList.get(i));
+            List<QuestionAndAnswer> questionAndAnswerList = iQuestionAndAnswerService.getAllAnswers(questionIdList.get(i));
+            Map map = new HashMap();
+            map.put("question", question);
+            map.put("reply_count", questionAndAnswerList.size());
+            list.add(map);
+        }
+        Map map = new HashMap();
+        map.put("questionListPage", list);
+        map.put("pageInfo", pageInfo);
+        model.setCode(AjaxCode.OK);
+        model.setData(map);
         return model;
     }
 
