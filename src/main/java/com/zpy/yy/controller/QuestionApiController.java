@@ -1,14 +1,8 @@
 package com.zpy.yy.controller;
 
 import com.zpy.yy.base.BaseController;
-import com.zpy.yy.bean.AppToken;
-import com.zpy.yy.bean.Question;
-import com.zpy.yy.bean.QuestionAndAnswer;
-import com.zpy.yy.bean.Sufferer;
-import com.zpy.yy.service.IAppTokenService;
-import com.zpy.yy.service.IQuestionAndAnswerService;
-import com.zpy.yy.service.IQuestionService;
-import com.zpy.yy.service.ISuffererService;
+import com.zpy.yy.bean.*;
+import com.zpy.yy.service.*;
 import com.zpy.yy.util.AjaxCode;
 import com.zpy.yy.util.AjaxModel;
 import com.zpy.yy.util.PageInfo;
@@ -41,6 +35,12 @@ public class QuestionApiController extends BaseController {
 
     @Autowired
     IAppTokenService iAppTokenService;
+
+    @Autowired
+    IAnswerService iAnswerService;
+
+    @Autowired
+    IDoctorService iDoctorService;
 
     /**
      * 问答列表
@@ -118,14 +118,14 @@ public class QuestionApiController extends BaseController {
 
     @RequestMapping("/getMyQuestions")
     @ResponseBody
-    public AjaxModel getMyQuestions(String token,PageInfo pageInfo) {
+    public AjaxModel getMyQuestions(String token, PageInfo pageInfo) {
         AjaxModel model = new AjaxModel();
-        if(TextUtil.isEmpty(token)) {
+        if (TextUtil.isEmpty(token)) {
             model.setCode(AjaxCode.TOKEN_IS_NULL);
             return model;
         }
         AppToken appToken = iAppTokenService.findAppTokenByToken(token);
-        if(appToken==null) {
+        if (appToken == null) {
             model.setCode(AjaxCode.ACCOUNT_ALREADY_NOT_EXIST);
             return model;
         }
@@ -140,10 +140,33 @@ public class QuestionApiController extends BaseController {
             list.add(map);
         }
         Map map = new HashMap();
-        map.put("questionListPage",list);
+        map.put("questionListPage", list);
         map.put("pageInfo", pageInfo);
         model.setCode(AjaxCode.OK);
         model.setData(map);
+        return model;
+    }
+
+    @RequestMapping("/getAnswersForOneQuestion")
+    @ResponseBody
+    public AjaxModel getAnswersForOneQuestion(Integer questionId) {
+        AjaxModel model = new AjaxModel();
+        if (questionId == null) {
+            model.setCode(AjaxCode.ERROR);
+            return model;
+        }
+        List<QuestionAndAnswer> questionAndAnswers = iQuestionAndAnswerService.getAnswersByQuestionId(questionId);
+        List<Map<String,Object>> list = new ArrayList<>();
+        for (int i = 0; i < questionAndAnswers.size(); i++) {
+            Answer answer = iAnswerService.findAnswerById(questionAndAnswers.get(i).getAnswerId());
+            Doctor doctor = iDoctorService.findDoctorById(answer.getDoctorId());
+            Map map = new HashMap();
+            map.put("answer",answer);
+            map.put("doctor",doctor);
+            list.add(map);
+        }
+        model.setData(list);
+        model.setCode(AjaxCode.OK);
         return model;
     }
 }
