@@ -146,9 +146,11 @@ public class DoctorApiController extends BaseController {
             QuestionAndAnswer qa = new QuestionAndAnswer();
             qa.setQuestionId(questionId);
             qa.setAnswerId(answer.getId());
-            iQuestionAndAnswerService.updateQA(qa);
+            iQuestionAndAnswerService.addQA(qa);
             model.setCode(AjaxCode.OK);
             return model;
+        } else {
+            System.out.println("失败");
         }
         model.setCode(AjaxCode.ERROR);
         return model;

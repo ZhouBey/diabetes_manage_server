@@ -63,7 +63,7 @@ public class TextUtil {
         return decrypted;
     }
 
-    //ÃÜÂëºË¶Ô
+    //å¯†ç æ ¸å¯¹
     public static boolean passwordCheck(String password) {
         if (password.matches("^(?=.*[0-9].*)(?=.*[a-zA-Z].*).{6,20}$")) {
             return true;
@@ -71,7 +71,7 @@ public class TextUtil {
         return false;
     }
 
-    //ÊÖ»úºÅºË¶Ô
+    //æ‰‹æœºå·æ ¸å¯¹
     public static boolean phoneCheck(String phone) {
         if (phone.matches("^1[34578]+\\d{9}$")) {
             return true;
@@ -80,7 +80,7 @@ public class TextUtil {
     }
 
     /**
-     * ÅĞ¶Ï¸ø¶¨×Ö·û´®ÊÇ·ñ¿Õ°×´®¡£ ¿Õ°×´®ÊÇÖ¸ÓÉ¿Õ¸ñ¡¢ÖÆ±í·û¡¢»Ø³µ·û¡¢»»ĞĞ·û×é³ÉµÄ×Ö·û´® ÈôÊäÈë×Ö·û´®Îªnull»ò¿Õ×Ö·û´®£¬·µ»Øtrue
+     * åˆ¤æ–­ç»™å®šå­—ç¬¦ä¸²æ˜¯å¦ç©ºç™½ä¸²ã€‚ ç©ºç™½ä¸²æ˜¯æŒ‡ç”±ç©ºæ ¼ã€åˆ¶è¡¨ç¬¦ã€å›è½¦ç¬¦ã€æ¢è¡Œç¬¦ç»„æˆçš„å­—ç¬¦ä¸² è‹¥è¾“å…¥å­—ç¬¦ä¸²ä¸ºnullæˆ–ç©ºå­—ç¬¦ä¸²ï¼Œè¿”å›true
      *
      * @param input
      * @return boolean
@@ -100,7 +100,7 @@ public class TextUtil {
 
 
     /**
-     * ÅĞ¶¨ÊäÈëºº×Ö
+     * åˆ¤å®šè¾“å…¥æ±‰å­—
      *
      * @param c
      * @return
@@ -114,7 +114,7 @@ public class TextUtil {
     }
 
     /**
-     * ¼ì²âStringÊÇ·ñÈ«ÊÇÖĞÎÄ
+     * æ£€æµ‹Stringæ˜¯å¦å…¨æ˜¯ä¸­æ–‡
      *
      * @param name
      * @return
@@ -165,7 +165,7 @@ public class TextUtil {
         return md;
     }
 
-    //¸ù¾İµ±Ç°ÈÕÆÚÅĞ¶ÏÊÇÖÜ¼¸
+    //æ ¹æ®å½“å‰æ—¥æœŸåˆ¤æ–­æ˜¯å‘¨å‡ 
     public static int getWeekOfDate(Date date) {
         int[] weekDays = {7, 1, 2, 3, 4, 5, 6};
         Calendar cal = Calendar.getInstance();
@@ -176,11 +176,11 @@ public class TextUtil {
         return weekDays[w];
     }
 
-    //»ñÈ¡µ±Ç°ÈÕÆÚµÄÇ°Ò»Ìì
+    //è·å–å½“å‰æ—¥æœŸçš„å‰ä¸€å¤©
     public static Date getPrevDate(Date date) {
         Calendar c = Calendar.getInstance();
         c.setTime(date);
-        c.add(Calendar.DAY_OF_MONTH, -1);  //ÉèÖÃÎªÇ°Ò»Ìì
+        c.add(Calendar.DAY_OF_MONTH, -1);  //è®¾ç½®ä¸ºå‰ä¸€å¤©
         return c.getTime();
     }
 
@@ -195,10 +195,10 @@ public class TextUtil {
         return new Date();
     }
     public static Integer getSexInt(String sex) {
-        if("ÄĞ".equals(sex)) {
+        if("ç”·".equals(sex)) {
             return 0;
         }
-        if("Å®".equals(sex)) {
+        if("å¥³".equals(sex)) {
             return 1;
         }
         return -1;
