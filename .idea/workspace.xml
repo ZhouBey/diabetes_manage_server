@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ea5995-fbc6-47da-8723-6ed9ac080d44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/DoctorApiController.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/DoctorApiController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/dao/AnswerDao.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/dao/AnswerDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/dao/QuestionAndAnswerDao.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/dao/QuestionAndAnswerDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/IAnswerService.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/IAnswerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/IQuestionAndAnswerService.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/IQuestionAndAnswerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/impl/AnswerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/impl/AnswerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/impl/QuestionAndAnswerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/impl/QuestionAndAnswerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage.war" afterPath="$PROJECT_DIR$/target/diabetesmanage.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/DoctorApiController.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/DoctorApiController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/dao/AnswerDao.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/dao/AnswerDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/dao/QuestionAndAnswerDao.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/dao/QuestionAndAnswerDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/IAnswerService.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/IAnswerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/IQuestionAndAnswerService.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/IQuestionAndAnswerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/impl/AnswerServiceImpl.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/impl/AnswerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/impl/QuestionAndAnswerServiceImpl.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/impl/QuestionAndAnswerServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/AnswerDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/AnswerDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/QuestionAndAnswerDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/QuestionAndAnswerDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IAnswerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IAnswerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IQuestionAndAnswerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IQuestionAndAnswerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/AnswerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/AnswerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/QuestionAndAnswerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/QuestionAndAnswerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/QuestionAndAnswerDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/QuestionAndAnswerDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/mapper/QuestionAndAnswerDao.xml" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/mapper/QuestionAndAnswerDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/mapper/QuestionAndAnswerDao.xml" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/mapper/QuestionAndAnswerDao.xml" />
     </list>
     <ignored path="DiabetesManage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +48,7 @@
       <file leaf-file-name="DoctorApiController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20833333">
+            <state vertical-scroll-proportion="0.7058824">
               <caret line="186" column="44" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
               <folding />
             </state>
@@ -996,7 +971,7 @@
       <workItem from="1455183047181" duration="2488000" />
       <workItem from="1455978675415" duration="3327000" />
       <workItem from="1456022395878" duration="3579000" />
-      <workItem from="1456028967762" duration="9460000" />
+      <workItem from="1456028967762" duration="9643000" />
     </task>
     <task id="LOCAL-00001" summary="医生可以对一个问题回复多次">
       <created>1455980001902</created>
@@ -1028,11 +1003,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456032666996</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改：区分我的主页中的我的回复和我的提问">
+      <created>1456050897632</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1456050897632</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212357000" />
+    <option name="totallyTimeSpent" value="212540000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1094,7 +1075,8 @@
     <MESSAGE value="医生可以对一个问题回复多次" />
     <MESSAGE value="增加一个接口，获取问题对应的回答" />
     <MESSAGE value="修改：获取问题对应的回答的接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改：获取问题对应的回答的接口" />
+    <MESSAGE value="修改：区分我的主页中的我的回复和我的提问" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改：区分我的主页中的我的回复和我的提问" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1508,7 +1490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20833333">
+        <state vertical-scroll-proportion="0.7058824">
           <caret line="186" column="44" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
           <folding />
         </state>
