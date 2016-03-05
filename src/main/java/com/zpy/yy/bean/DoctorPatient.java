@@ -10,8 +10,6 @@ public class DoctorPatient implements Serializable {
     private Integer id;
     private Integer suffererId;
     private Integer doctorId;
-    private Integer isAgree;
-
     private Date createD;
     private Date updateD;
     private Date deleteD;
@@ -64,11 +62,4 @@ public class DoctorPatient implements Serializable {
         this.doctorId = doctorId;
     }
 
-    public Integer getIsAgree() {
-        return isAgree;
-    }
-
-    public void setIsAgree(Integer isAgree) {
-        this.isAgree = isAgree;
-    }
 }

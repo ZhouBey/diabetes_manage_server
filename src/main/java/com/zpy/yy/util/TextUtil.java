@@ -1,5 +1,8 @@
 package com.zpy.yy.util;
 
+import com.zpy.yy.bean.BloodSugarLog;
+import com.zpy.yy.service.IBloodSugarLogService;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
@@ -194,11 +197,12 @@ public class TextUtil {
         }
         return new Date();
     }
+
     public static Integer getSexInt(String sex) {
-        if("男".equals(sex)) {
+        if ("男".equals(sex)) {
             return 0;
         }
-        if("女".equals(sex)) {
+        if ("女".equals(sex)) {
             return 1;
         }
         return -1;

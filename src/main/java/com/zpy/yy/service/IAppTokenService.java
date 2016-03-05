@@ -14,7 +14,7 @@ public interface IAppTokenService {
 
     AppToken findAppTokenById(Integer id);
 
-    AppToken findAppTokenByUserId(Integer user_id,Integer roleType);
+    AppToken findAppTokenByUserId(Integer user_id, Integer roleType);
 
     AppToken findAppTokenByToken(String token);
 }
