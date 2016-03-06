@@ -133,7 +133,7 @@ public class DoctorPatientApiController extends BaseController {
      *
      * @param token
      * @param doctorId
-     * @return
+     * @return ok代表已关注，err代表未关注
      */
     @RequestMapping("/isAttention")
     @ResponseBody
@@ -150,14 +150,11 @@ public class DoctorPatientApiController extends BaseController {
         }
         Integer suffererId = suffererAppToken.getUserId();
         DoctorPatient doctorPatient = iDoctorPatientService.findDoctorPatientByDoctorIdAndSuffererId(suffererId, doctorId);
-        Map map = new HashMap();
         if (doctorPatient == null) {
-            map.put("isAttention", false);
+            model.setCode(AjaxCode.ERROR);
         } else {
-            map.put("isAttention", true);
+            model.setCode(AjaxCode.OK);
         }
-        model.setCode(AjaxCode.OK);
-        model.setData(map);
         return model;
     }
 }
