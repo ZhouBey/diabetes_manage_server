@@ -103,7 +103,7 @@ public class DoctorApiController extends BaseController {
 
     @RequestMapping("/getDoctorInfo")
     @ResponseBody
-    public AjaxModel getDoctorInfo(String token, String suffererToken) {
+    public AjaxModel getDoctorInfo(String token) {
         AjaxModel model = new AjaxModel();
         if (TextUtil.isEmpty(token)) {
             model.setCode(AjaxCode.TOKEN_IS_NULL);
@@ -118,18 +118,6 @@ public class DoctorApiController extends BaseController {
         Doctor doctor = iDoctorService.findDoctorById(userId);
         Map map = new HashMap();
         map.put("doctor", doctor);
-        if (!TextUtil.isEmpty(suffererToken)) {
-            AppToken suffererAppToken = iAppTokenService.findAppTokenByToken(suffererToken);
-            if (suffererAppToken != null) {
-                Integer suffererId = suffererAppToken.getUserId();
-                DoctorPatient doctorPatient = iDoctorPatientService.findDoctorPatientByDoctorIdAndSuffererId(suffererId, doctor.getId());
-                if (doctorPatient == null) {
-                    map.put("isAttention", false);
-                } else {
-                    map.put("isAttention", true);
-                }
-            }
-        }
         model.setCode(AjaxCode.OK);
         model.setData(map);
         return model;

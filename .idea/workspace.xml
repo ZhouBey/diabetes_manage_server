@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ea5995-fbc6-47da-8723-6ed9ac080d44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/bean/DoctorPatient.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/bean/DoctorPatient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/DoctorApiController.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/DoctorApiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/DoctorPatientApiController.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/DoctorPatientApiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/SuffererApiController.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/controller/SuffererApiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/dao/DoctorPatientDao.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/dao/DoctorPatientDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/IDoctorPatientService.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/IDoctorPatientService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/impl/DoctorPatientServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/service/impl/DoctorPatientServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/util/TextUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/util/TextUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage.war" afterPath="$PROJECT_DIR$/target/diabetesmanage.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/bean/DoctorPatient.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/bean/DoctorPatient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/DoctorApiController.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/DoctorApiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/DoctorPatientApiController.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/DoctorPatientApiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/SuffererApiController.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/controller/SuffererApiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/dao/DoctorPatientDao.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/dao/DoctorPatientDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/IDoctorPatientService.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/IDoctorPatientService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/impl/DoctorPatientServiceImpl.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/service/impl/DoctorPatientServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/util/TextUtil.class" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/util/TextUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/bean/DoctorPatient.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/bean/DoctorPatient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/SuffererApiController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/SuffererApiController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/DoctorPatientDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/DoctorPatientDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IAppTokenService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IAppTokenService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IDoctorPatientService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IDoctorPatientService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/DoctorPatientServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/DoctorPatientServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zpy/yy/util/TextUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/zpy/yy/util/TextUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/DoctorPatientDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/DoctorPatientDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zpy/yy/mapper/DoctorPatientDao.xml" afterPath="$PROJECT_DIR$/target/classes/com/zpy/yy/mapper/DoctorPatientDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/mapper/DoctorPatientDao.xml" afterPath="$PROJECT_DIR$/target/diabetesmanage/WEB-INF/classes/com/zpy/yy/mapper/DoctorPatientDao.xml" />
     </list>
     <ignored path="DiabetesManage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,17 +71,52 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="69" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="69" />
+              <caret line="103" column="35" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoctorPatientDao.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.0">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.862069">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoctorPatientApiController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5833333">
+              <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoctorPatientDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/DoctorPatientDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5173675">
-              <caret line="112" column="14" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
               <folding>
                 <marker date="1457193307981" expanded="true" signature="1120:1515" placeholder="update docto... " />
                 <marker date="1457193307981" expanded="true" signature="1592:1817" placeholder="select id , doctor_patient" />
@@ -79,6 +125,16 @@
                 <marker date="1457193307981" expanded="true" signature="2597:2880" placeholder="select id , doctor_patient" />
                 <marker date="1457193307981" expanded="true" signature="2933:2991" placeholder="update docto... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IHealthInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/OpinionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IOpinionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/OpinionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/DoctorDao.xml" />
@@ -160,13 +214,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/util/TextUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/bean/DoctorPatient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IAppTokenService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/IDoctorPatientService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/service/impl/DoctorPatientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/SuffererApiController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/DoctorPatientDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/DoctorPatientDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/login.css" />
       </list>
     </option>
   </component>
@@ -235,6 +291,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,26 +342,12 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DiabetesManage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DiabetesManage" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,11 +369,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,18 +399,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiabetesManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiabetesManage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yy" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiabetesManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiabetesManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -810,6 +896,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -961,7 +1052,8 @@
       <workItem from="1456022395878" duration="3579000" />
       <workItem from="1456028967762" duration="9643000" />
       <workItem from="1456545162524" duration="593000" />
-      <workItem from="1457187337358" duration="6025000" />
+      <workItem from="1457187337358" duration="6264000" />
+      <workItem from="1457239992337" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="医生可以对一个问题回复多次">
       <created>1455980001902</created>
@@ -999,11 +1091,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456050897632</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1、去掉患者控制器中的获取患者一周血糖的api；&#10;2、添加患者和医生关注的接口">
+      <created>1457193488299</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1457193488299</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219158000" />
+    <option name="totallyTimeSpent" value="220141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1032,7 +1130,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32245827" sideWeight="0.4883402" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26100153" sideWeight="0.4883402" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26326004" sideWeight="0.5116598" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14369658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1069,7 +1167,8 @@
     <MESSAGE value="增加一个接口，获取问题对应的回答" />
     <MESSAGE value="修改：获取问题对应的回答的接口" />
     <MESSAGE value="修改：区分我的主页中的我的回复和我的提问" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改：区分我的主页中的我的回复和我的提问" />
+    <MESSAGE value="1、去掉患者控制器中的获取患者一周血糖的api；&#10;2、添加患者和医生关注的接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、去掉患者控制器中的获取患者一周血糖的api；&#10;2、添加患者和医生关注的接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1082,20 +1181,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/bean/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32230216">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/bean/Opinion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/OpinionDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32230216">
@@ -1195,13 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/util/AjaxModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1213,7 +1291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="308" column="30" selection-start-line="308" selection-start-column="30" selection-end-line="308" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,13 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.10968921">
           <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
-          <folding>
-            <marker date="1455182147007" expanded="true" signature="1260:1737" placeholder="update quest... " />
-            <marker date="1455182147007" expanded="true" signature="1810:2052" placeholder="select id , questions" />
-            <marker date="1455182147007" expanded="true" signature="2149:2449" placeholder="select id , questions" />
-            <marker date="1455182147007" expanded="true" signature="2535:2793" placeholder="select id , questions" />
-            <marker date="1455182147007" expanded="true" signature="2846:2900" placeholder="update quest... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,12 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.023765996">
           <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
-          <folding>
-            <marker date="1455182147004" expanded="true" signature="1080:1458" placeholder="update answe... " />
-            <marker date="1455182147004" expanded="true" signature="1529:1742" placeholder="select id , answers" />
-            <marker date="1455182147004" expanded="true" signature="1825:2051" placeholder="select id , answers" />
-            <marker date="1455182147004" expanded="true" signature="2104:2156" placeholder="update answe... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1334,13 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4734918">
           <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
-          <folding>
-            <marker date="1456046239574" expanded="true" signature="1137:1555" placeholder="update quest... " />
-            <marker date="1456046239574" expanded="true" signature="1636:1865" placeholder="select id , question_and_answer" />
-            <marker date="1456046239574" expanded="true" signature="1960:2246" placeholder="select id , question_and_answer" />
-            <marker date="1456046239574" expanded="true" signature="2341:2625" placeholder="select id , question_and_answer" />
-            <marker date="1456046239574" expanded="true" signature="2678:2742" placeholder="update quest... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1364,7 +1421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5833333">
           <caret line="49" column="59" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,7 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.29166666">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,7 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5416667">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5416667">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,7 +1464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7916667">
           <caret line="48" column="93" selection-start-line="48" selection-start-column="93" selection-end-line="48" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,19 +1471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.625">
           <caret line="15" column="95" selection-start-line="15" selection-start-column="95" selection-end-line="15" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5538194">
-          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1440,7 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.75">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1460,14 +1497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="69" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/dao/DoctorPatientDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1478,8 +1507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/zpy/yy/mapper/DoctorPatientDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5173675">
-          <caret line="112" column="14" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
           <folding>
             <marker date="1457193307981" expanded="true" signature="1120:1515" placeholder="update docto... " />
             <marker date="1457193307981" expanded="true" signature="1592:1817" placeholder="select id , doctor_patient" />
@@ -1487,6 +1516,51 @@
             <marker date="1457193307981" expanded="true" signature="2247:2487" placeholder="select id , doctor_patient" />
             <marker date="1457193307981" expanded="true" signature="2597:2880" placeholder="select id , doctor_patient" />
             <marker date="1457193307981" expanded="true" signature="2933:2991" placeholder="update docto... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.862069">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zpy/yy/controller/DoctorPatientApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5833333">
+          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

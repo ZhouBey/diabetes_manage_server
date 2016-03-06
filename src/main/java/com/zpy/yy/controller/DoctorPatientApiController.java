@@ -127,4 +127,37 @@ public class DoctorPatientApiController extends BaseController {
         model.setData(map);
         return model;
     }
+
+    /**
+     * 判断医生和患者是否已关注
+     *
+     * @param token
+     * @param doctorId
+     * @return
+     */
+    @RequestMapping("/isAttention")
+    @ResponseBody
+    public AjaxModel isAttention(String token, Integer doctorId) {
+        AjaxModel model = new AjaxModel();
+        if (TextUtil.isEmpty(token) || doctorId == null) {
+            model.setCode(AjaxCode.PARAM_ERROR);
+            return model;
+        }
+        AppToken suffererAppToken = iAppTokenService.findAppTokenByToken(token);
+        if (suffererAppToken == null) {
+            model.setCode(AjaxCode.GET_ACCOUNT_ERR);
+            return model;
+        }
+        Integer suffererId = suffererAppToken.getUserId();
+        DoctorPatient doctorPatient = iDoctorPatientService.findDoctorPatientByDoctorIdAndSuffererId(suffererId, doctorId);
+        Map map = new HashMap();
+        if (doctorPatient == null) {
+            map.put("isAttention", false);
+        } else {
+            map.put("isAttention", true);
+        }
+        model.setCode(AjaxCode.OK);
+        model.setData(map);
+        return model;
+    }
 }

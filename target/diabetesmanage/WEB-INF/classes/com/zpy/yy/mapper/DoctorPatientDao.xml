@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zpy.yy.dao.DoctorPatientDao" >
+<mapper namespace="com.zpy.yy.dao.DoctorPatientDao">
     <insert id="save" parameterType="DoctorPatient" useGeneratedKeys="true" keyProperty="id">
         insert into doctor_patient
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -15,10 +15,6 @@
 
             <if test="doctorId != null">
                 doctor_id,
-            </if>
-
-            <if test="isAgree != null">
-                is_agree,
             </if>
 
             create_d
@@ -36,10 +32,6 @@
 
             <if test="doctorId != null">
                 #{ doctorId },
-            </if>
-
-            <if test="isAgree != null">
-                #{ isAgree },
             </if>
 
             now()
@@ -61,16 +53,12 @@
                 doctor_id=#{ doctorId },
             </if>
 
-            <if test="isAgree != null">
-                is_agree=#{ isAgree },
-            </if>
-
             update_d=now()
 
         </set>
         where id = #{ id}
     </update>
-    <select id="findById"  resultType="DoctorPatient">
+    <select id="findById" resultType="DoctorPatient">
         select
 
         id
@@ -79,9 +67,6 @@
         ,
 
         doctor_id
-        ,
-
-        is_agree
         ,
 
         create_d
@@ -91,7 +76,7 @@
         delete_d
         from doctor_patient where id = #{id} and delete_d is null
     </select>
-    <select id="findDoctorPatientByDoctorId"  resultType="DoctorPatient">
+    <select id="findDoctorPatientByDoctorId" resultType="DoctorPatient">
         select
 
         id
@@ -99,8 +84,6 @@
         sufferer_id
         ,
         doctor_id
-        ,
-        is_agree
         ,
         create_d
         ,
@@ -109,7 +92,7 @@
         delete_d
         from doctor_patient where doctor_id = #{doctorId} and delete_d is null
     </select>
-    <select id="findDoctorPatientBySuffererId"  resultType="DoctorPatient">
+    <select id="findDoctorPatientBySuffererId" resultType="DoctorPatient">
         select
 
         id
@@ -118,8 +101,6 @@
         ,
         doctor_id
         ,
-        is_agree
-        ,
         create_d
         ,
         update_d
@@ -127,8 +108,26 @@
         delete_d
         from doctor_patient where sufferer_id = #{suffererId} and delete_d is null
     </select>
-    <update id="deleteById" >
+
+    <select id="findDoctorPatientByDoctorIdAndSuffererId" resultType="DoctorPatient">
+        select
+        id
+        ,
+        sufferer_id
+        ,
+        doctor_id
+        ,
+        create_d
+        ,
+        update_d
+        ,
+        delete_d
+        from doctor_patient where sufferer_id = #{suffererId}
+        and doctor_id = #{doctorId}
+        and delete_d is null
+    </select>
+
+    <update id="deleteById">
         update doctor_patient set delete_d =now() where id = #{id}
     </update>
-
 </mapper>
