@@ -98,4 +98,14 @@ public class DoctorServiceImpl implements IDoctorService {
         pageInfo.setShowCount(((Page) list).getPageSize());
         return list;
     }
+
+    @Override
+    public List<Doctor> searchDoctors(String keyWord, PageInfo pageInfo) {
+        PageHelper.startPage(pageInfo.getCurrentPage(), pageInfo.getShowCount());
+        List<Doctor> list = doctorDao.searchDoctors(keyWord);
+        pageInfo.setTotalResult((int) ((Page) list).getTotal());
+        pageInfo.setCurrentPage(((Page) list).getPageNum());
+        pageInfo.setShowCount(((Page) list).getPageSize());
+        return list;
+    }
 }

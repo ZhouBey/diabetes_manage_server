@@ -25,4 +25,5 @@ public interface IDoctorService {
      */
     Doctor findDoctorByPassword(String phone,String password);
     List<Doctor> getAllDoctorListPage(PageInfo pageInfo);
+    List<Doctor> searchDoctors(String keyWord,PageInfo pageInfo);
 }

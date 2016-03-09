@@ -2,9 +2,11 @@ package com.zpy.yy.controller;
 
 import com.zpy.yy.base.BaseController;
 import com.zpy.yy.bean.AppToken;
+import com.zpy.yy.bean.Doctor;
 import com.zpy.yy.bean.DoctorPatient;
 import com.zpy.yy.service.IAppTokenService;
 import com.zpy.yy.service.IDoctorPatientService;
+import com.zpy.yy.service.IDoctorService;
 import com.zpy.yy.service.ISuffererService;
 import com.zpy.yy.util.AjaxCode;
 import com.zpy.yy.util.AjaxModel;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +37,9 @@ public class DoctorPatientApiController extends BaseController {
 
     @Autowired
     ISuffererService iSuffererService;
+
+    @Autowired
+    IDoctorService iDoctorService;
 
     /**
      * 患者添加关注医生
@@ -95,8 +101,15 @@ public class DoctorPatientApiController extends BaseController {
             return model;
         }
         List<DoctorPatient> doctorPatientList = iDoctorPatientService.findDoctorPatientBySuffererId(suffererId, pageInfo);
+        List<Doctor> doctors = new ArrayList<>();
+        for (int i = 0; i < doctorPatientList.size(); i++) {
+            Integer doctorId = doctorPatientList.get(i).getDoctorId();
+            Doctor doctor = iDoctorService.findDoctorById(doctorId);
+            doctors.add(doctor);
+        }
         Map map = new HashMap();
-        map.put("doctorPatientList", doctorPatientList);
+        map.put("doctors", doctors);
+        map.put("pageInfo", pageInfo);
         model.setCode(AjaxCode.OK);
         model.setData(map);
         return model;

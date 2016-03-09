@@ -45,9 +45,9 @@ public class QuestionServiceImpl implements IQuestionService {
     }
 
     @Override
-    public List<Question> getQuestionListPageBySuffererId(Integer suffererId,PageInfo pageInfo) {
+    public List<Question> getQuestionListPageBySuffererId(Integer suffererId, PageInfo pageInfo) {
         PageHelper.startPage(pageInfo.getCurrentPage(), pageInfo.getShowCount());
-        List<Question> list = questionDao.getQuestionAllListPage();
+        List<Question> list = questionDao.getQuestionListPageBySuffererId(suffererId);
         pageInfo.setTotalResult((int) ((Page) list).getTotal());
         pageInfo.setCurrentPage(((Page) list).getPageNum());
         pageInfo.setShowCount(((Page) list).getPageSize());

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zpy.yy.dao.DoctorDao" >
+<mapper namespace="com.zpy.yy.dao.DoctorDao">
     <insert id="save" parameterType="Doctor" useGeneratedKeys="true" keyProperty="id">
         insert into doctor
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -178,7 +178,7 @@
         </set>
         where id = #{ id}
     </update>
-    <select id="findById"  resultType="Doctor">
+    <select id="findById" resultType="Doctor">
         select
 
         id
@@ -221,10 +221,10 @@
 
         from doctor where id = #{id} and delete_d is null
     </select>
-    <update id="deleteById" >
+    <update id="deleteById">
         update  doctor set delete_d =now() where id = #{id}
     </update>
-    <select id="findDoctorByPhone"  resultType="Doctor">
+    <select id="findDoctorByPhone" resultType="Doctor">
         select
 
         id
@@ -265,7 +265,7 @@
 
         from doctor where phone = #{phone} and delete_d is null
     </select>
-    <select id="getAllDoctorListPage"  resultType="Doctor">
+    <select id="getAllDoctorListPage" resultType="Doctor">
         select
 
         id
@@ -306,6 +306,48 @@
 
         from doctor where delete_d IS  NULL
 
+        order by create_d desc
+    </select>
+    <select id="searchDoctors" resultType="Doctor">
+        select
+
+        id
+        ,
+
+        name
+        ,
+
+        phone
+        ,
+
+        password
+        ,
+
+        sex
+        ,
+
+        birthday
+        ,
+
+        address
+        ,
+
+        hospital
+        ,
+
+        photo
+        ,
+
+        certificate_image
+        ,
+
+        is_activate
+        ,
+        post
+        ,
+        info
+
+        from doctor where delete_d IS NULL AND name LIKE '%${keyWord}%'OR hospital LIKE '%${keyWord}%'
         order by create_d desc
     </select>
 </mapper>

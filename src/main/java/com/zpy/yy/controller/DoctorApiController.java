@@ -161,6 +161,10 @@ public class DoctorApiController extends BaseController {
     @ResponseBody
     public AjaxModel getDoctorsListPage(PageInfo pageInfo) {
         AjaxModel model = new AjaxModel();
+        if (pageInfo == null) {
+            model.setCode(AjaxCode.PARAM_ERROR);
+            return model;
+        }
         List<Doctor> doctors = iDoctorService.getAllDoctorListPage(pageInfo);
         Map map = new HashMap();
         map.put("doctors", doctors);
@@ -174,7 +178,7 @@ public class DoctorApiController extends BaseController {
     @ResponseBody
     public AjaxModel getOneDoctorReply(String token, PageInfo pageInfo) {
         AjaxModel model = new AjaxModel();
-        if (TextUtil.isEmpty(token)) {
+        if (TextUtil.isEmpty(token) || pageInfo == null) {
             model.setCode(AjaxCode.TOKEN_IS_NULL);
             return model;
         }
@@ -203,6 +207,23 @@ public class DoctorApiController extends BaseController {
         }
         Map map = new HashMap();
         map.put("questionListPage", list);
+        map.put("pageInfo", pageInfo);
+        model.setCode(AjaxCode.OK);
+        model.setData(map);
+        return model;
+    }
+
+    @RequestMapping("/getSearchDoctors")
+    @ResponseBody
+    public AjaxModel getSearchDoctors(String keyWord, PageInfo pageInfo) {
+        AjaxModel model = new AjaxModel();
+        if (TextUtil.isEmpty(keyWord) || pageInfo == null) {
+            model.setCode(AjaxCode.PARAM_ERROR);
+            return model;
+        }
+        List<Doctor> doctors = iDoctorService.searchDoctors(keyWord, pageInfo);
+        Map map = new HashMap();
+        map.put("doctors", doctors);
         map.put("pageInfo", pageInfo);
         model.setCode(AjaxCode.OK);
         model.setData(map);

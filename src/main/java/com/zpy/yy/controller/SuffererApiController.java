@@ -122,6 +122,12 @@ public class SuffererApiController extends BaseController {
         return model;
     }
 
+    /**
+     * 更换头像
+     * @param token
+     * @param photo
+     * @return
+     */
     @RequestMapping("/uploadMyPhoto")
     @ResponseBody
     public AjaxModel uploadMyPhoto(String token, String photo) {
@@ -243,45 +249,6 @@ public class SuffererApiController extends BaseController {
         model.setCode(AjaxCode.ERROR);
         return model;
     }
-
-    /**
-     * 患者获取本周的血糖记录
-     *
-     * @return
-     */
-//    @RequestMapping("/getCurrentWeekBloodSugarLog")
-//    @ResponseBody
-//    public AjaxModel getCurrentWeekBloodSugarLog(String token) {
-//        AjaxModel model = new AjaxModel();
-//
-//        //通过token查找用户
-//        AppToken appToken = iAppTokenService.findAppTokenByToken(token);
-//        if (appToken == null) {
-//            model.setCode(AjaxCode.GET_ACCOUNT_ERR);
-//            return model;
-//        }
-//        Integer user_id = appToken.getUserId();
-//
-//        List<BloodSugarLog> bloodSugarLogs = new ArrayList<>();
-//        int weekOfDate = TextUtil.getWeekOfDate(new Date()) + 1;
-//        Date date = new Date();
-//        while (--weekOfDate > 0) {
-//            BloodSugarLog bloodSugarLog = iBloodSugarLogService.findBloodSugarLogByDateAndSuffererId(date, user_id);
-//            if (bloodSugarLog != null) {
-//                bloodSugarLogs.add(bloodSugarLog);
-//            }
-//            date = TextUtil.getPrevDate(date);
-//        }
-//        if (bloodSugarLogs.size() == 0) {
-//            model.setCode(AjaxCode.CURRENT_WEEK_NO_BLOOD_SUGAR_LOG);
-//            return model;
-//        }
-//        Map map = new HashMap();
-//        map.put("bloodSugarLogs", bloodSugarLogs);
-//        model.setCode(AjaxCode.OK);
-//        model.setData(map);
-//        return model;
-//    }
 
     /**
      * 获取患者列表

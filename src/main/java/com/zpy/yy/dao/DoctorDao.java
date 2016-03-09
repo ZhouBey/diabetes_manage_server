@@ -2,6 +2,7 @@ package com.zpy.yy.dao;
 
 import com.zpy.yy.base.BaseMapper;
 import com.zpy.yy.bean.Doctor;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,4 +14,5 @@ import java.util.List;
 public interface DoctorDao extends BaseMapper<Doctor> {
     Doctor findDoctorByPhone(String phone);
     List<Doctor> getAllDoctorListPage();
+    List<Doctor> searchDoctors(@Param("keyWord") String keyWord);
 }

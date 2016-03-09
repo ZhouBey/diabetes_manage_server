@@ -129,7 +129,9 @@ public class QuestionApiController extends BaseController {
             model.setCode(AjaxCode.ACCOUNT_ALREADY_NOT_EXIST);
             return model;
         }
+        System.out.println("id=" + appToken.getUserId());
         List<Question> myQuestionList = iQuestionService.getQuestionListPageBySuffererId(appToken.getUserId(), pageInfo);
+        System.out.println("size=" + myQuestionList.size());
         List<Map<String, Object>> list = new ArrayList<>();
         for (int i = 0; i < myQuestionList.size(); i++) {
             Question question = myQuestionList.get(i);
