@@ -101,9 +101,9 @@ public class DoctorApiController extends BaseController {
         return model;
     }
 
-    @RequestMapping("/getDoctorInfo")
+    @RequestMapping("/getDoctorInfoByToken")
     @ResponseBody
-    public AjaxModel getDoctorInfo(String token) {
+    public AjaxModel getDoctorInfoByToken(String token) {
         AjaxModel model = new AjaxModel();
         if (TextUtil.isEmpty(token)) {
             model.setCode(AjaxCode.TOKEN_IS_NULL);
@@ -116,6 +116,23 @@ public class DoctorApiController extends BaseController {
         }
         Integer userId = appToken.getUserId();
         Doctor doctor = iDoctorService.findDoctorById(userId);
+        Map map = new HashMap();
+        map.put("doctor", doctor);
+        model.setCode(AjaxCode.OK);
+        model.setData(map);
+        return model;
+    }
+
+    @RequestMapping("/getDoctorInfoById")
+    @ResponseBody
+    public AjaxModel getDoctorInfoById(Integer doctorId) {
+        AjaxModel model = new AjaxModel();
+        if (doctorId == null) {
+            model.setCode(AjaxCode.PARAM_ERROR);
+            return model;
+        }
+        System.out.println("doctorId=" + doctorId);
+        Doctor doctor = iDoctorService.findDoctorById(doctorId);
         Map map = new HashMap();
         map.put("doctor", doctor);
         model.setCode(AjaxCode.OK);
