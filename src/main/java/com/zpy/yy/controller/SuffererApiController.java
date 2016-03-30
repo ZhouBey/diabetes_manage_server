@@ -268,4 +268,17 @@ public class SuffererApiController extends BaseController {
         model.setData(map);
         return model;
     }
+
+    @RequestMapping("/deleteSufferer")
+    @ResponseBody
+    public AjaxModel deleteSufferer(Integer sufferer_id) {
+        AjaxModel model = new AjaxModel();
+        if(sufferer_id == null) {
+            model.setCode(AjaxCode.PARAM_ERROR);
+            return model;
+        }
+        iSuffererService.deleteSufferById(sufferer_id);
+        model.setCode(AjaxCode.OK);
+        return model;
+    }
 }
